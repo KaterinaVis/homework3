@@ -2,3 +2,29 @@
 3 -> 1, 8, 27
 5 -> 1, 8, 27, 64, 125 */
 
+int number = ReadInt("Введите число: ");
+int count =1;
+
+while(count < number)
+{
+Console.Write(Coub(count) + ", ");
+count++; 
+if (count == number) 
+{
+    Console.Write(Coub(count) + " ");
+}
+}
+
+
+
+int ReadInt(string message)
+{
+     Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+
+int Coub(int num)
+{
+    return num*num*num;
+}
